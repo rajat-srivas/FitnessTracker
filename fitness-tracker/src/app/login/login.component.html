@@ -1,0 +1,14 @@
+<section class="signup-form">
+
+    <form fxLayout="column" #f="ngForm" (ngSubmit)="onSubmit(f)" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field>
+            <input type="email" #emailInput="ngModel" email required matInput placeholder="Your email" ngModel name="email">
+            <mat-error *ngIf="emailInput.hasError('required')">Email is required</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="password" required matInput placeholder="Your password" name="passwordInput" #passwordInput="ngModel" ngModel>
+            <mat-error *ngIf="passwordInput.hasError('required')">Password is required</mat-error>
+        </mat-form-field>
+        <button type="submit" [disabled]="f.invalid" mat-raised-button color="primary">Login</button>
+    </form>
+</section>
