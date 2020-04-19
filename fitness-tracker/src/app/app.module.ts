@@ -13,6 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {FormsModule} from '@angular/forms';
+import { StopTrainingComponent } from './stop-training/stop-training.component';
+import { AuthService } from './Auth.service';
+import { TrainingService } from './training.service';
 
 @NgModule({
    declarations: [
@@ -24,17 +27,19 @@ import {FormsModule} from '@angular/forms';
       PastTrainingComponent,
       SignupComponent,
       LoginComponent,
-      WelcomeComponent
+      WelcomeComponent,
+      StopTrainingComponent
    ],
    imports: [
-      BrowserModule,
+BrowserModule,
       AppRoutingModule,
       BrowserAnimationsModule,
       MaterialModule,
       FlexLayoutModule,
       FormsModule
    ],
-   providers: [],
+   providers: [AuthService, TrainingService],
+   entryComponents: [StopTrainingComponent],
    bootstrap: [
       AppComponent
    ]

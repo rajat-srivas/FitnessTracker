@@ -4,7 +4,8 @@ mat-form-field {
 
 form {
     width: 350px;
-    border: 5px solid #000;
+    border: 5px solid whitesmoke;
     padding: 10px;
     margin: 0 auto;
+    margin-top: 20px;
 }
